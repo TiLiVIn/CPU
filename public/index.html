@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPU - Caça Palavras do Urubu</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #cpu {
+            width: 100%;
+            height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            width: 32px;
+            height: 32px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <section class="cpu" id="cpu">
+        <div class="container">
+            <div class="row" id="row0"></div>
+            <div class="row" id="row1"></div>
+            <div class="row" id="row2"></div>
+            <div class="row" id="row3"></div>
+            <div class="row" id="row4"></div>
+            <div class="row" id="row5"></div>
+            <div class="row" id="row6"></div>
+            <div class="row" id="row7"></div>
+            <div class="row" id="row8"></div>
+            <div class="row" id="row9"></div>
+
+            <button onclick="verificar()">Verificar palavras</button>
+        </div>
+    </section>
+
+    <script src="./js/"></script>
+</body>
+
+</html>
+
+<script>
+
+    var rows = document.querySelectorAll('.row')
+
+    var matriz = [
+        ['v', 'a', 'i'],
+        ['a', '', ''],
+        ['i', 'a', 'v']
+    ]; 
+
+    function gerarInput(linha, col) {
+        if(matriz[linha][col] == '') {
+            rows[linha].innerHTML += `
+                <input id="${linha}${col}" class="box disable" disabled/>
+            `;
+        } else {
+            rows[linha].innerHTML += `
+                <input id="${linha}${col}" class="box" />
+            `;
+        }
+        
+    }
+
+    function gerarMatriz() {
+        for (var linha = 0; linha < matriz.length; linha++) {
+            for (var col = 0; col < matriz.length; col++) {
+                gerarInput(linha, col);
+            }
+        }
+    }
+
+    gerarMatriz();
+
+    function alerta() {
+        alert("preencha todos os blocos imediatamente!!!"); 
+    }
+
+    function verificar() {
+
+        for (var linha = 0; linha < matriz.length; linha++) {
+            for (var col = 0; col < matriz.length; col++) {
+                var input_letra = document.getElementById(`${linha}${col}`)
+
+                if(matriz[linha][col] != '') {
+                    if(input_letra.value != '') {
+                        if(input_letra.value == matriz[linha][col]) {
+                            console.log('letra certa!')
+                        } else {
+                            console.log('letra errada')
+                        }
+                    } else {
+                        alert("Preencha todos os blocos!")
+                        return;
+                    }
+                    
+                }   
+            }
+            
+
+        }
+
+        console.log("Terminou de rodar!")
+    }
+
+</script>
