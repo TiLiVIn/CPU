@@ -1,18 +1,18 @@
-CPU
-ULA
+CPU - Parte de um sistema computacional, que realiza as instruções de um programa de computador.
+ULA - Circuito digital que realiza operações de adição e booleana AND
 Registradores
-RAM
-ROM
-EPROM
+RAM - Memória temporária computacional de acesso rápido
+ROM - Memória que suas informações são gravadas pelo fabricante uma única vez e após isso não podem ser alteradas ou apagadas, somente acessadas
+EPROM - Chip de memória de computador que mantém seus dados quando a energia é desligada
 FLASH
-MEMORIA DE MASSA
+MEMORIA DE MASSA - HD
 DMA
 CS
 ADDRESS BUS
 DATA BUS
 I5
 I7
-DUAL CORE
-QUAD CORE
+DUAL CORE - Processador com dois núcleos de processamento no interior de um único chip
+QUAD CORE - Processador com quatro núcleos de processamento no interior de um único chip
 THREADS
 CACHE
