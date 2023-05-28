@@ -104,18 +104,18 @@
         [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'M', ' ', ' ', ' '],
         [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'E', ' ', ' ', ' '],
         [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'D', ' ', 'M', ' ', ' ', ' '],
-        [' ', 'R', 'E', 'G', 'I', 'S', 'D', 'O', 'T', 'R', 'A', 'D', 'O', 'R', 'E', 'S'],
-        [' ', ' ', ' ', ' ', '5', ' ', ' ', ' ', ' ', ' ', 'T', ' ', 'R', ' ', ' ', ' '],
-        [' ', 'D', ' ', 'a', ' ', ' ', ' ', ' ', ' ', ' ', 'A', ' ', 'I', '7', ' ', ' '],
+        [' ', ' ', ' ', 'R', 'E', 'G', 'I', 'S', 'T', 'R', 'A', 'D', 'O', 'R', 'E', 's'],
+        [' ', ' ', ' ', ' ', ' ', ' ', '5', ' ', ' ', ' ', 'T', ' ', 'R', ' ', ' ', ' '],
+        [' ', 'D', ' ', 'A', ' ', ' ', ' ', ' ', ' ', ' ', 'A', ' ', 'I', '7', ' ', ' '],
         ['Q', 'U', 'A', 'D', 'C', 'O', 'R', 'E', ' ', ' ', 'B', ' ', 'A', ' ', ' ', ' '],
-        [' ', 'A', ' ', 'd', ' ', ' ', ' ', 'P', ' ', ' ', 'U', ' ', 'D', 'M', 'A', ' '],
-        [' ', 'L', ' ', 'r', ' ', ' ', ' ', 'R', ' ', ' ', 'S', ' ', 'E', ' ', ' ', ' '],
-        [' ', 'C', ' ', 'e', ' ', ' ', 'R', 'O', 'M', ' ', ' ', ' ', 'M', ' ', ' ', ' '],
-        [' ', 'O', ' ', 's', ' ', ' ', ' ', 'M', ' ', ' ', ' ', ' ', 'A', ' ', ' ', ' '],
-        [' ', 'R', ' ', 's', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'C', 'S', ' ', ' ', ' '],
-        [' ', 'E', ' ', 'b', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'S', ' ', ' ', ' '],
-        [' ', ' ', ' ', 'u', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'R', 'S', 'M', ' ', ' '],
-        [' ', ' ', ' ', 's', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
+        [' ', 'A', ' ', 'D', ' ', ' ', ' ', 'p', ' ', ' ', 'U', ' ', 'D', 'M', 'A', ' '],
+        [' ', 'L', ' ', 'R', ' ', ' ', ' ', 'R', ' ', ' ', 'S', ' ', 'E', ' ', ' ', ' '],
+        [' ', 'c', ' ', 'E', ' ', ' ', 'R', 'O', 'M', ' ', ' ', ' ', 'M', ' ', ' ', ' '],
+        [' ', 'O', ' ', 'S', ' ', ' ', ' ', 'M', ' ', ' ', ' ', ' ', 'A', ' ', ' ', ' '],
+        [' ', 'R', ' ', 'S', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'c', 'S', ' ', ' ', ' '],
+        [' ', 'E', ' ', 'B', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'S', ' ', ' ', ' '],
+        [' ', ' ', ' ', 'U', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'R', 'A', 'M', ' ', ' '],
+        [' ', ' ', ' ', 'S', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
         [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
     ];
 
@@ -147,37 +147,42 @@
     }
 
     function verificar() {
+        var qtdLetras = 0;
+        var qtdLetrasCertas = 0;
 
         for (var linha = 0; linha < matriz.length; linha++) {
             for (var col = 0; col < matriz.length; col++) {
-                var input_letra_active = document.getElementById(`${linha}/${col}`)
-                var input_letra_disable = document.getElementById(`${linha}/${col}`)
+                var input_letra = document.getElementById(`${linha}/${col}`)
 
-                // console.log(input_letra_active);
 
-                if (matriz[linha][col] != ' ') {
+                if(matriz[linha][col] != ' ') {
                     // if(input_letra_active.value != '') {
-                    if (input_letra_active.value == matriz[linha][col]) {
-                        console.log('letra correta!')
-                        input_letra_active.style.border = '2px solid green';
-                    } else {
-                        console.log('letra errada!')
-                        input_letra_active.style.border = '2px solid red';
-                    }
+                        if(input_letra == matriz[linha][col]) {
+                            console.log('letra correta!')
+                            input_letra.style.border = '2px solid green';
+                            qtdLetras++;
+                        } else {
+                            console.log('letra errada!')
+                            input_letra.style.border = '2px solid red';
+                            qtdLetrasCertas++
+                        }
                     // } 
                     // else {
                     //     alert("Preencha todos os blocos!");
-                    //     // console.log(input_letra_active);
+                    //     // console.log(input_letra);
                     //     return;
                     // }
-
-                }
+                    
+                }   
             }
+            
 
-
+        if(qtdLetrasCertas == qtdLetras) {
+            alert('Parabéns você ganhou!')
         }
 
         console.log("Terminou de rodar!")
     }
+}
 
 </script>
