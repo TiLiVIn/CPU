@@ -9,7 +9,7 @@ function expandir(){
         sidebar.classList.add('active')
     }
 
-    for (var i = 1; i < 17; i++) {
+    for (var i = 1; i < 19; i++) {
         var questoes = document.getElementById(`question${i}`);
         questoes.classList.add('question-ativada')
     }
@@ -20,8 +20,8 @@ function expandir(){
     }
 
 
-    console.log('console do menu na func minimizar:'+ menu.classList[1]);
-    console.log('console do menuInativo na func minimizar:'+ menuInativo.classList[1]);
+    // console.log('console do menu na func minimizar:'+ menu.classList[1]);
+    // console.log('console do menuInativo na func minimizar:'+ menuInativo.classList[1]);
 }
 
 function minimizar(){
@@ -39,14 +39,14 @@ function minimizar(){
         menu.classList.replace('desativada', 'ativada')
     }
 
-    for (var i = 1; i < 17; i++) {
+    for (var i = 1; i < 19; i++) {
         var questoes = document.getElementById(`question${i}`);
         questoes.classList.remove('question-ativada')
     }
 
 
-    console.log('console do menu na func minimizar:'+ menu.classList[1]);
-    console.log('console do menuInativo na func minimizar:'+ menuInativo.classList[1]);
+    // console.log('console do menu na func minimizar:'+ menu.classList[1]);
+    // console.log('console do menuInativo na func minimizar:'+ menuInativo.classList[1]);
 }
 
 function movimentar(){

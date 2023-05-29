@@ -1,18 +1,37 @@
 CPU - Parte de um sistema computacional, que realiza as instruções de um programa de computador.
 ULA - Circuito digital que realiza operações de adição e booleana AND
-Registradores
-RAM - Memória temporária computacional de acesso rápido
-ROM - Memória que suas informações são gravadas pelo fabricante uma única vez e após isso não podem ser alteradas ou apagadas, somente acessadas
+Registradores - Circuitos digitais capazes de armazenar e deslocar informações binárias
+RAM - Memória computácional volátil de acesso rápido
+ROM - Memória computácional que só permite leitura
 EPROM - Chip de memória de computador que mantém seus dados quando a energia é desligada
-FLASH
-MEMORIA DE MASSA - HD
-DMA
-CS
-ADDRESS BUS
-DATA BUS
-I5
-I7
+FLASH - Memória computacional não volátil
+MEMORIA DE MASSA - Memória computacional de grande capacidade de armazenamento
+DMA - Permissão de acesso direto à memória
+CS - linha de controle em eletrônica digital usada para selecionar um dos circuitos integrados
+ADDRESS BUS - Endereço de identificação de memória
+DATA BUS - Sistema que fornece um transporte de dados
+I5 - Processador de capacidade média
+I7 - Processador de capacidade avançada
 DUAL CORE - Processador com dois núcleos de processamento no interior de um único chip
 QUAD CORE - Processador com quatro núcleos de processamento no interior de um único chip
-THREADS
-CACHE
+THREADS - Linha de execução das tarefas a serem processadas
+CACHE - Biblioteca de acesso rápido de um processador
+
+1- THREAD - Linha de execução das tarefas a serem processadas
+2- DATA BUS - Sistema que fornece um transporte de dados
+3- I5   - Processador de capacidade média
+4- REGISTRADORES - Circuitos digitais capazes de armazenar e deslocar informações binárias
+5- DUAL CORE - Processador com dois núcleos de processamento no interior de um único chip
+6- QUAD CORE - Processador com quatro núcleos de processamento no interior de um único chip
+7- CACHE - Biblioteca de acesso rápido de um processador
+8- EPROM - Chip de memória de computador que mantém seus dados quando a energia é desligada
+9- I7 - Processador de capacidade avançada
+10- CPU - Parte de um sistema computacional, que realiza as instruções de um programa de computador
+11- DMA - Permissão de acesso direto à memória
+12- ROM - Memória computácional que só permite leitura
+13- CS - linha de controle em eletrônica digital usada para selecionar um dos circuitos integrados
+14- ULA - Circuito digital que realiza operações de adição e booleana AND
+15- RAM - Memória computácional volátil de acesso rápido
+16 - FLASH - Memória computacional não volátil
+17- MEMORIA DE MASSA - Memória computacional de grande capacidade de armazenamento
+18- ADDRESS BUS - Endereço de identificação de memória

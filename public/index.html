@@ -30,22 +30,24 @@
           </div>
         </div>
         <div class="conteudo">
-          <label class="question" id="question1">1</label>
-          <label class="question" id="question2">2</label>
-          <label class="question" id="question3">3</label>
-          <label class="question" id="question4">4</label>
-          <label class="question" id="question5">5</label>
-          <label class="question" id="question6">6</label>
-          <label class="question" id="question7">7</label>
-          <label class="question" id="question8">8</label>
-          <label class="question" id="question9">9</label>
-          <label class="question" id="question10">10</label>
-          <label class="question" id="question11">11</label>
-          <label class="question" id="question12">12</label>
-          <label class="question" id="question13">13</label>
-          <label class="question" id="question14">14</label>
-          <label class="question" id="question15">15</label>
-          <label class="question" id="question16">16</label>
+          <p class="question" id="question1">1 - Linha de execução das tarefas a serem processadas</p>
+          <p class="question" id="question2">2 - Sistema que fornece um transporte de dados</p>
+          <p class="question" id="question3">3 - Processador de capacidade média</p>
+          <p class="question" id="question4">4 - Circuitos digitais capazes de armazenar e deslocar informações binárias</p>
+          <p class="question" id="question5">5 - Processador com dois núcleos de processamento no interior de um único chip</p>
+          <p class="question" id="question6">6 - Processador com quatro núcleos de processamento no interior de um único chip</p>
+          <p class="question" id="question7">7 - Biblioteca de acesso rápido de um processador</p>
+          <p class="question" id="question8">8 - Chip de memória de computador que mantém seus dados quando a energia é desligada</p>
+          <p class="question" id="question9">9 - Processador de capacidade avançada</p>
+          <p class="question" id="question10">10 - Parte de um sistema computacional, que realiza as instruções de um programa de computador</p>
+          <p class="question" id="question11">11 - Permissão de acesso direto à memória</p>
+          <p class="question" id="question12">12 - Memória computácional que só permite leitura</p>
+          <p class="question" id="question13">13 - linha de controle em eletrônica digital usada para selecionar um dos circuitos integrados</p>
+          <p class="question" id="question14">14 - Circuito digital que realiza operações de adição e booleana AND</p>
+          <p class="question" id="question15">15 - Memória computácional volátil de acesso rápido</p>
+          <p class="question" id="question16">16 - Memória computacional não volátil</p>
+          <p class="question" id="question17">17 - Memória computacional de grande capacidade de armazenamento</p>
+          <p class="question" id="question18">18 - Endereço de identificação de memória</p>
         </div>
       </div>
       <div class="container">
@@ -134,7 +136,7 @@
       " ",
       " ",
       " ",
-      " ",
+      "T",
       " ",
       " ",
       "E",
@@ -152,7 +154,7 @@
       " ",
       " ",
       " ",
-      " ",
+      "H",
       "D",
       " ",
       "M",
@@ -188,7 +190,7 @@
       "5",
       " ",
       " ",
-      " ",
+      "E",
       "T",
       " ",
       "R",
@@ -206,7 +208,7 @@
       " ",
       " ",
       " ",
-      " ",
+      "A",
       "A",
       " ",
       "I",
@@ -224,7 +226,7 @@
       "R",
       "E",
       " ",
-      " ",
+      "D",
       "B",
       " ",
       "A",
@@ -237,11 +239,11 @@
       "A",
       " ",
       "D",
+      "A",
       " ",
-      " ",
-      " ",
+      "C",
       "p",
-      " ",
+      "U",
       " ",
       "U",
       " ",
@@ -255,7 +257,7 @@
       "L",
       " ",
       "R",
-      " ",
+      "C",
       " ",
       " ",
       "R",
@@ -270,10 +272,10 @@
     ],
     [
       " ",
-      "c",
+      "C",
       " ",
       "E",
-      " ",
+      "H",
       " ",
       "R",
       "O",
@@ -291,7 +293,7 @@
       "O",
       " ",
       "S",
-      " ",
+      "E",
       " ",
       " ",
       "M",
@@ -345,8 +347,8 @@
       " ",
       " ",
       "U",
-      " ",
-      " ",
+      "L",
+      "A",
       " ",
       " ",
       " ",
@@ -359,11 +361,11 @@
       " ",
     ],
     [
-      " ",
-      " ",
-      " ",
+      "F",
+      "L",
+      "A",
       "S",
-      " ",
+      "H",
       " ",
       " ",
       " ",
@@ -402,9 +404,9 @@
                 <input id="${linha}/${col}" class="box disable" disabled/>
             `;
     } else {
-      rows[linha].innerHTML += `
-                <input id="${linha}/${col}" class="box" maxlength="1" style="text-transform:uppercase;" />
-            `;
+        rows[linha].innerHTML += `
+            <input id="${linha}/${col}" class="box" maxlength="1" style="text-transform:uppercase;" />
+        `;
     }
   }
 
@@ -429,11 +431,12 @@
     for (var linha = 0; linha < matriz.length; linha++) {
       for (var col = 0; col < matriz.length; col++) {
         var input_letra = document.getElementById(`${linha}/${col}`);
-
+        
+        
         if (matriz[linha][col] != " ") {
           qtdLetras++;
           // if(input_letra_active.value != '') {
-          if (input_letra.value == matriz[linha][col]) {
+          if (input_letra.value.toUpperCase() == matriz[linha][col]) {
             console.log("letra correta!");
             input_letra.style.border = "2px solid green";
             qtdLetrasCertas++;
@@ -457,4 +460,62 @@
       alert("Parabéns você ganhou!");
     }
   }
+
+  
+//   var span = document.createElement('span');
+//   var spanText = document.createTextNode("new replacement span element.")
+//   span.appendChild(spanText);
+
+var ids = [
+    '0/9',
+    '1/10',
+    '2/6',
+    '3/2',
+    '4/1',
+    '5/0',
+    '5/4',
+    '5/7',
+    '5/11',
+    '7/5',
+    '7/11',
+    '9/5',
+    '11/10',
+    '13/6',
+    '13/10',
+    '14/5',
+    '14/12',
+    '15/3'
+];
+
+var rows = [
+    'row0',
+    'row1',
+    'row2',
+    'row3',
+    'row4',
+    'row5',
+    'row5',
+    'row5',
+    'row5',
+    'row7',
+    'row7',
+    'row9',
+    'row11',
+    'row13',
+    'row13',
+    'row14',
+    'row14',
+    'row15'
+];
+
+for (var i = 0; i < ids.length; i++) {
+
+    var element = document.createRange().createContextualFragment(`<p class="label"> ${i + 1} </p>`)
+    var old = document.getElementById(ids[i]);
+    document.getElementById(rows[i]).replaceChild(element, old);
+
+}
+
+
+
 </script>
